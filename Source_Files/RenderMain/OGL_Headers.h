@@ -34,7 +34,7 @@
 #define GL_GLEXT_PROTOTYPES 1
 #endif
 
-#include <SDL/SDL_opengl.h>
+#include "SDL_opengl.h"
 
 #endif
 

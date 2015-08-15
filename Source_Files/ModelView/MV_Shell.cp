@@ -28,8 +28,8 @@
 #if defined (__APPLE__) && defined (__MACH__)
 # include <OpenGL/gl.h>
 # include <OpenGL/glu.h>
-# include <OpenGL/glut.h>
-# include <Movies.h>
+# include <GLUT/GLUT.h>
+# include <QuickTime/Movies.h>
 #elif defined mac
 # include <gl.h>
 # include <glu.h>

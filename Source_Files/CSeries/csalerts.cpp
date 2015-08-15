@@ -36,6 +36,7 @@ April 22, 2003 (Woody Zenfell):
 */
 #endif
 
+#include "cstypes.h"
 #include "csalerts.h"
 #include "csstrings.h"
 
@@ -73,7 +74,7 @@ void alert_user(
 	OSErr error)
 {
 #ifdef TARGET_API_MAC_CARBON
-	char *Msg = TS_GetCString(resid,item);
+	const char *Msg = TS_GetCString(resid,item);
 	char NumStr[256];
 	sprintf(NumStr,"Error ID: %hd",error);
 	InitCursor();
@@ -165,7 +166,7 @@ void _alephone_assert(
 	int32 line,
 	const char *what)
 {
-	vhalt(csprintf(assert_text,"%s:%d: %s",file,line,what));
+	vhalt(csprintf(assert_text,"%s:%d: %s",file,(int)line,what));
 }
 
 void _alephone_warn(
@@ -173,7 +174,7 @@ void _alephone_warn(
 	int32 line,
 	const char *what)
 {
-	vpause(csprintf(assert_text,"%s:%d: %s",file,line,what));
+	vpause(csprintf(assert_text,"%s:%d: %s",file,(int)line,what));
 }
 
 

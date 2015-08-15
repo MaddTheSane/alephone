@@ -151,6 +151,7 @@ enum eMenuBarState
 	SHOWING
 };
 
+#include "cstypes.h"
 #include "csalerts.h"
 #include "csstrings.h"
 

@@ -36,7 +36,7 @@
 #include <time.h>
 #include <string>
 
-#define DEBUG
+#define DEBUG 1
 
 #ifndef __MVCPP__
 
@@ -90,12 +90,14 @@ struct Rect {
 const int noErr = 0;
 #endif
 
+#ifndef __QUICKDRAW__
 struct RGBColor {
 	uint16 red, green, blue;
 };
 
 const int kFontIDMonaco = 4;
 const int kFontIDCourier = 22;
+#endif
 
 #else
 # if !defined(TARGET_API_MAC_CARBON)

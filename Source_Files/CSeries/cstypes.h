@@ -45,7 +45,9 @@ typedef UInt8 uint8;
 typedef SInt16 int16;
 typedef UInt16 uint16;
 typedef SInt32 int32;
+#ifndef _CSSMCONFIG_H_
 typedef UInt32 uint32;
+#endif
 typedef uint32 TimeType;
 
 #elif defined(__BEOS__)
